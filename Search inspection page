@@ -1,0 +1,159 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button Tests>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align="center"><h1>Search Inspection</h1></ion-title>
+  </ion-navbar>
+</ion-header>
+<style type="text/css">
+  
+  .scrollable{
+    overflow: auto;
+    width: 100px; /* adjust this width depending to amount of text to display */
+    height: 25px; /* adjust height depending on number of options to display */
+    border: 1px silver solid;
+  }
+  .scrollable select{
+    border: none;
+  }
+ </style>
+ 
+<ion-content  class="bgimg" padding >
+
+  <h2 align="center">  Location Information </h2>
+<p align="center">
+  <label for="assetid">Inspectable Asset Id:</label>
+
+<textarea id="assetid" name="assetid" rows="1" cols="12">
+
+</textarea>
+<br> <br> <br>
+  
+  <label name="region" id="region">Region</label> 
+  <select name="region" id="region" value="abc" class="scrollable">
+    <option value="">SELECT</option>
+		<option value="All">5</option>
+		<option value="1">10</option>
+    <option value="4">15</option>
+    <option value="All">20</option>
+		<option value="1">25</option>
+		<option value="4">30</option></select> 
+  <label name="Div" id="Div">         Division</label> 
+  <select name="Div" id="Div" value="abc"class="scrollable"><option value="">SELECT</option>
+		<option value="All">5</option>
+		<option value="1">10</option>
+    <option value="4">15</option>
+    <option value="All">20</option>
+		<option value="1">25</option>
+		<option value="4">30</option></select>
+  <label name="Subdiv" id="Subdiv">       Sub Division</label> 
+  <select name="Subdiv" id="Subdiv" value="abc" class="scrollable"><option value="">SELECT</option>
+		<option value="All">5</option>
+		<option value="1">10</option>
+    <option value="4">15</option>
+    <option value="All">20</option>
+		<option value="1">25</option>
+		<option value="4">30</option></select>
+<br><br></p>
+ <p align="center"> <label name="Prefix" id="Prefix">Prefix</label>  
+  <select name="Prefix" id="Prefix">
+    <option value="All">Any</option>
+		<option value="1">10</option>
+    <option value="4">15</option>
+    <option value="All">20</option>
+		<option value="1">25</option>
+		<option value="4">30</option>
+  </select>  
+<label for="met_area">Metropolitan Range:</label>
+
+  <textarea id="met_area" name="met_area1" rows="1" cols="5">
+  
+  </textarea>
+  -
+  <textarea id="met_area" name="met_area2" rows="1" cols="5"> </textarea> </p>
+  <br><hr><hr>
+<h2 align="center">Force Number Information</h2>
+  <hr><p align="center">
+  <label name="Region" id="Region">Region</label> 
+  <select name="Region" id="Region" value="abc"></select>
+  <label name="Division" id="Division">Division</label> 
+  <select name="Division" id="Division" value="abc"></select>
+  <label name="Signal supervisor" id="S_sup">Sub Division</label> 
+  <select name="Signal supervisor" id="S_sup" value="abc"></select>
+  <br><br>
+  <label name="Force number" id="F_no">Force Number</label> 
+  <select name="Force Number" id="F_no">
+    <option value="1">--Select Region--</option>
+  <option value="All">5</option>
+  <option value="1">10</option>
+  <option value="4">15</option>
+  <option value="All">20</option>
+  <option value="1">25</option>
+  <option value="4">30</option></select> </p>
+  <p align="center"> If you know the force number you can type it below: <br>
+  <textarea id="F_no" name="Force Number" rows="1" cols="12">
+  </textarea>
+  <br><br> </p><hr>
+  <p align="center">Search Inspections:
+  <input type="radio" id="S_I" name="S_I" vale="case1"> <label>on this Force Number's teritorry</label>
+  <input type="radio" id="S_I" name="S_I" vale="case2"> <label>by this Force Number</label>
+  <input type="radio" id="S_I" name="S_I" vale="case3"> <label>by this Person</label> </p>
+  <br><h2 align="center">Range of Dates to Searches</h2><br>
+  <p align="center">
+  <input type="radio" id="date_search" name="date_search" vale="opt1"> <label>Date Test performed</label>   
+  <input type="radio" id="date_search" name="date_search" vale="opt2"> <label>Date uploaded to RailDOCs</label><br><br><br>
+ 
+    <label for="start" >From:</label>
+
+    <input type="date" id="from_date" name="from_date"
+          
+           min="2019-01-01" max="2029-12-31">
+    <label for="End">To:</label>
+
+           <input type="date" id="to_date" name="to_date"
+                 
+                  min="2019-01-01" max="2029-12-31"> </p>
+      <P align="center">-OR-</P>
+     <P align="center"> <label name="dayrange" id="dayrange">In the Last </label> 
+      
+      <select class="scrollable">
+		<option value="">SELECT</option>
+		<option value="All">5</option>
+		<option value="1">10</option>
+    <option value="4">15</option>
+    <option value="All">20</option>
+		<option value="1">25</option>
+		<option value="4">30</option>
+	  	</select>
+      
+      Days</P><br><br><hr><hr>
+      <h2 align="center">Test Type</h2><p align="center"><br><br>
+      <label name="Test_type" id="test_typ">Test types:</label> 
+      <select name="Test_type" id="test_typ">
+        <option value="1">SELECT</option>
+      <option value="All">5</option>
+      <option value="1">10</option>
+      <option value="4">15</option>
+      <option value="All">20</option>
+      <option value="1">25</option>
+      <option value="4">30</option></select> &nbsp;&nbsp;&nbsp;
+      <label name="Frequency" id="f">Frequency:</label> 
+      <select name="Frequency" id="f">
+      <option value="1">SELECT</option>
+		<option value="All">5</option>
+		<option value="1">10</option>
+    <option value="4">15</option>
+    <option value="All">20</option>
+		<option value="1">25</option>
+		<option value="4">30</option></select></p>
+  <p align="left">  <input type="checkbox" id="lock" name="lock" >
+    <label for="lock">Lock only for startup tests</label><br>
+    <input type="checkbox" id="lock1" name="lock1" >
+    <label for="lock"> Lock only for Out-of-schedule tests</label><br>
+    <input type="checkbox" id="lock1" name="lock1">
+    <label for="lock">Lock only for Imported test records</label><br>   </p>   
+
+   
+      
+</ion-content>
